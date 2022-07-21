@@ -1,0 +1,44 @@
+$colors: (
+    'bg-main': #ffffff,
+    'bg-sec': #fff5f6,
+
+    'bg-header': #ffb8ca,
+    'bg-header-round': #ffa5ba,
+    'bg-prod1': $bg-header,
+    'bg-prod2': #f0d1a5,
+    'bg-prod3': #c2e297,
+    'bg-review': #fafafa,
+
+    'bg-btn-hov': #ecebeb,
+    'bg-icon': #fea5bb,
+
+    'accent': #d41342,
+
+    'txt-title': #d41443,
+    'txt-subtitle': #ffa5ba,
+    'txt-light': #ffffff,
+    'txt-dark': #000000,
+    'txt-dark-sec': #907e82,
+);
+
+
+
+$w-mob: 320px;
+$w-tab: 768px;
+$w-desk: 1200px;
+
+$w-container-mob: calc(100%-20px*2);
+$w-container-tab: 736px;
+$w-container-desk: 1168px;
+
+$pad-section: 60px;
+
+$gutter: 32px;
+
+$border-r-card: 24px;
+$border-r-btn: 22px;
+//buttons for sections in the header
+$border-r-btn-link: 20px;
+
+//check if it is the same for all cards
+$shadow: 0 8px 30px rgba(212, 20, 67, .1);

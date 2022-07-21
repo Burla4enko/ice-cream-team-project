@@ -1,0 +1,88 @@
+@mixin font($fs: 14px, $lh, $ls: .04em, $fw: 400) {
+    font-size: $fs;
+    line-height: calcLineHeight($fs, $lh);
+    letter-spacing: $ls;
+    font-weight: $fw;    
+}
+
+@mixin font-title($fs: 58px, $lh: 66px, $ls: .06em, $tt: none, $ff: ('Titan One', cursive)) {
+    font-family: $ff;
+    font-size: $fs;
+    line-height: calcLineHeight($fs, $lh);    
+    letter-spacing: $ls;
+    font-weight: $fw;
+    text-transform: $tt;
+
+}
+
+@mixin transition($property) {
+    transition-property: $property;
+    transition-duration: $time-transition;
+    transition-timing-function: $cubic;
+}
+
+//mixins for @media
+
+@mixin mobile-only() {
+    @media screen and (min-width: $w-mob) and (max-width: ($w-tab - 1px)) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media screen and (min-width: $w-tab) {
+        @content;
+    }
+}
+
+@mixin tablet-only() {
+    @media screen and (min-width: $w-tab) and (max-width: ($w-desk - 1px)) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media screen and (min-width: $w-desk) {
+        @content;
+    }
+}
+
+@mixin  retina() {
+    @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            @content;
+        }   
+}
+
+//mixins for flex layout
+@mixin centered() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//якщо не потрібно вираховувати ширину елементів
+@mixin flex-row($gap: $gutter, $justify: stretch, $fw: nowrap) {
+    & {
+        display: flex;
+        gap: $gap;
+        justify-content: $justify;
+        flex-wrap: $fw;
+    }
+}
+
+@mixin flex($amount, $gap: $gutter, $justify: stretch, $property: flex-basis, $fw: nowrap) {
+    &__list {
+        display: flex;
+        flex-wrap: $fw;
+        justify-content: $justify;
+        gap: $gap;
+    }
+
+    &__item {
+        #{$property}: calc((100% - ($amount - 1)*$gap)/$amount);
+    }
+
+}

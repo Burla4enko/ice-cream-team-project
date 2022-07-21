@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+@function calcLineHeight($fontSize, $lineHeight) {
+    @return math.div(math.round(math.div($lineHeight, $fontSize)*1000), 1000);
+}
