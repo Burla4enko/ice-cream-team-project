@@ -1,0 +1,40 @@
+.gallery {
+    background-image: linear-gradient(to bottom, var(--bg-color-light) 20%, #ffffff 20%);
+
+    &__grid {
+        max-width: 320px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 2fr repeat(3, 1fr);
+
+        gap: 2.5px;
+
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5px;
+
+        &:nth-child(1) {
+            padding-top: 45px;
+        }
+
+        &:nth-child(2) {
+            padding-top: 28px;
+        }
+
+        &:nth-child(4) {
+            padding-top: 31px;
+        }
+
+        &:nth-child(5) {
+            padding-top: 21px;
+        }
+
+        &:nth-child(6) {
+            padding-top: 29px;
+        }
+    }
+
+}
