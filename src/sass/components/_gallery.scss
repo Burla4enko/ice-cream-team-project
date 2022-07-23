@@ -37,4 +37,19 @@
         }
     }
 
+    &__img {
+        border-radius: 8px;
+        transition: transform var(--transition-prop);
+
+        // доделать анимацию по ховеру, например, так
+        
+        //@include desktop() {
+            
+        //     &:hover {
+        //         transform: scale(110%);
+        //         z-index: 10;
+        //     }
+        // }
+    }
+
 }
