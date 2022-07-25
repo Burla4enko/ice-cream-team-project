@@ -1,0 +1,168 @@
+.reviews {
+    
+padding-bottom: var(--section-padding);
+
+    &__thumb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__picture {
+        margin-bottom: 32px;
+
+        @include tablet() {
+            margin-bottom: 20px;
+        }
+
+        @include desktop() {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__card {
+        position: relative;
+
+        padding: 43px 54px 17px 50px;
+        max-width: 280px;
+        height: 308px;
+        margin-bottom: 16px;
+        background-color: #FAFAFA;
+
+        @include tablet() {
+            display: flex;
+            justify-content: center;
+
+            padding: 37px 0 44px 0;
+            min-width: 620px;
+            height: 164px;
+            
+            margin-bottom: 4px;
+        }
+        
+        @include desktop() {
+            min-width: 968px;
+            height: 138px;
+
+            padding: 47px 0 39px 0;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text-lines {
+        display: block;
+
+        max-width: 180px;
+        height: 248px;
+        padding-left: 15px;
+        
+        background-image: repeating-linear-gradient(to bottom,
+            #FAFAFA,
+            #FAFAFA 30px,
+            #E1E1E1 30px,
+            #E1E1E1 31px
+        );
+
+        @include tablet() {
+            display: flex;
+            justify-content: center;
+            
+            padding-left: 0;
+
+            min-width: 608px;
+            height: 120px;
+        }
+    
+        @include desktop() {
+            min-width: 821px;
+            height: 90px;
+        }
+    }
+
+    &__name {
+        font-family: var(--font-main);
+        @include font(500, 14, 1.86, null);
+
+        @include tablet() {
+                @include font(500, 16, 1.86, null);
+            }
+        
+        @include desktop() {
+                @include font(500, 20, 1.86, null);
+            }
+    }
+
+    &__name::before {
+        content: '';
+        display: block;
+
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 16px;
+
+        width: 32px;
+        height: 4px;
+
+        background-image: url("../images/reviews/red-dots.svg");
+
+        @include tablet() {
+
+            }
+        
+        @include desktop() {
+
+            }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+
+        max-width: 157px;
+
+        font-family: var(--font-main);
+        @include font(500, 12, 2.58, null);
+        text-align: center;
+
+        @include tablet() {
+                max-width: 514px;
+
+                @include font(null, 14, 2.16, 0.04em);
+            }
+        
+            @include desktop() {
+                max-width: 750px;
+
+                @include font(null, 16, 1.86, null);
+            }
+    }
+
+    &__card::before {
+        content: '';
+        position: absolute;        
+        top: 30px;
+        left: 53px;
+        z-index: 01;
+
+        width: 54px;
+        height: 40px;
+
+        background-image: url("../images/reviews/dots.svg");
+        background-repeat: no-repeat;
+
+        @include tablet-only() {
+            top: 20px;
+            left: 6px;
+
+            width: 60px;
+            height: 40px;
+
+            background-image: url("../images/reviews/tablet-dots.svg");
+        }
+
+        @include desktop() {
+            top: 32px;
+            left: 72px;
+        }
+    }
+}
