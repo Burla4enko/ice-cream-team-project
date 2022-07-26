@@ -104,14 +104,6 @@ padding-bottom: var(--section-padding);
         height: 4px;
 
         background-image: url("../images/reviews/red-dots.svg");
-
-        @include tablet() {
-
-            }
-        
-        @include desktop() {
-
-            }
     }
 
     &__text {
